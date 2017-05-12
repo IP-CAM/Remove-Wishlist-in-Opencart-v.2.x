@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Remove Wishlist button</name>
+    <version>1.0</version>
+    <code>wishlist1</code>
+    <author>http://goo.gl/m2PGTc</author>
+    <link>http://goo.gl/0GUoeQ</link>
+    <file path="catalog/view/theme/*/template/*/*.tpl">
+      <operation>
+           <search><![CDATA[
+             <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+             ]]></search>
+           <add position="replace"><![CDATA[
+           ]]></add>
+       </operation>
+      <operation>
+           <search><![CDATA[
+             <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
+             ]]></search>
+           <add position="replace"><![CDATA[
+           ]]></add>
+       </operation>
+      <operation>
+           <search><![CDATA[
+             <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
+             ]]></search>
+           <add position="replace"><![CDATA[
+           ]]></add>
+       </operation>
+      <operation>
+           <search><![CDATA[
+             <a href="<?php echo $wishlist; ?>" class="list-group-item"><?php echo $text_wishlist; ?></a>
+             ]]></search>
+           <add position="replace"><![CDATA[
+           ]]></add>
+       </operation>
+      <operation>
+           <search><![CDATA[
+             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
+             ]]></search>
+           <add position="replace"><![CDATA[
+           ]]></add>
+       </operation>
+    </file>
+
+</modification>
